@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.AdvancedFeatures", "5.Adv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicConsoleApp", "5.AdvancedFeatures\BasicConsoleApp\BasicConsoleApp.csproj", "{7AA4581F-0931-4CBE-A514-E0FCA8FB8CFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicMinimalApi", "5.AdvancedFeatures\BasicMinimalApi\BasicMinimalApi.csproj", "{643D40E4-5B63-430B-9555-5A33E837BBA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,7 @@ Global
 		{71FE29B8-FD03-4781-8105-EE016DE3B045} = {8C9A63E3-90AA-4A86-A20A-60D3C895FB72}
 		{BB9680E8-13CA-4AFC-B1D1-77FAF08F305C} = {8C9A63E3-90AA-4A86-A20A-60D3C895FB72}
 		{7AA4581F-0931-4CBE-A514-E0FCA8FB8CFA} = {70F72119-411F-49CA-8E78-AA2DB511676D}
+		{643D40E4-5B63-430B-9555-5A33E837BBA2} = {70F72119-411F-49CA-8E78-AA2DB511676D}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9273B7F4-0D40-4337-B165-3988B5DB4E4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -89,5 +92,9 @@ Global
 		{7AA4581F-0931-4CBE-A514-E0FCA8FB8CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA4581F-0931-4CBE-A514-E0FCA8FB8CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA4581F-0931-4CBE-A514-E0FCA8FB8CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{643D40E4-5B63-430B-9555-5A33E837BBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643D40E4-5B63-430B-9555-5A33E837BBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643D40E4-5B63-430B-9555-5A33E837BBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643D40E4-5B63-430B-9555-5A33E837BBA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

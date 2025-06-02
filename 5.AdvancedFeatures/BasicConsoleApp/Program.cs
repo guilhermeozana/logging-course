@@ -7,6 +7,7 @@ using var loggerFactory = LoggerFactory.Create(builder =>
     builder.AddJsonConsole(x =>
     {
        x.IncludeScopes = true;
+       x.JsonWriterOptions = new JsonWriterOptions { Indented = true };
     });
     
     builder.SetMinimumLevel(LogLevel.Warning);
@@ -14,28 +15,23 @@ using var loggerFactory = LoggerFactory.Create(builder =>
 
 ILogger logger = loggerFactory.CreateLogger<Program>();
 
-var paymentData = new PaymentData
-{
-    PaymentId = 1,
-    Amount = 15.99m
-};
-
 var paymentId = 1;
 var amount = 15.99;
-var date = DateTime.Now;
 
-while (true)
+if (logger.IsEnabled(LogLevel.Information))
 {
-    logger.LogInformation(
-        "New Payment with data {PaymentData}", JsonSerializer.Serialize(paymentData));
-    await Task.Delay(1000);
+    logger.LogInformation("Payment Id: {PaymentId}", paymentId);
 }
 
-class PaymentData
+using (logger.BeginScope("{PaymentId}", paymentId))
 {
-    public int PaymentId { get; set; }
-    
-    public decimal Amount { get; set; }
-    
-    
+    try
+    {
+        logger.LogInformation("New payment for ${Total}", amount);
+        //processing
+    }
+    finally
+    {
+        logger.LogInformation("Payment processing completed");
+    }
 }
