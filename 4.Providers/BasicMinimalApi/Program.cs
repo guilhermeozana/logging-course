@@ -15,7 +15,7 @@ else
     builder.Logging.AddApplicationInsights(
         configureTelemetryConfiguration: teleConfig =>
             teleConfig.ConnectionString =
-                "InstrumentationKey=<INSTRUMENTATION_KEY>;IngestionEndpoint=<INGESTION_ENDPOINT>;LiveEndpoint=<LIVE_ENDPOINT>\n",
+                "InstrumentationKey=<INSTRUMENTATION_KEY>;IngestionEndpoint=<INGESTION_ENDPOINT>;LiveEndpoint=<LIVE_ENDPOINT>",
     
         configureApplicationInsightsLoggerOptions: _ => { }
     );
